@@ -12,7 +12,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+import sys
+sys.path.append("/root/private_data/Isaac-GR00T")  # 确保路径中包含 gr00t 文件夹
 import argparse
 import warnings
 

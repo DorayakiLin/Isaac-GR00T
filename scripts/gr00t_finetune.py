@@ -12,6 +12,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+import sys
+sys.path.append("/root/private_data/Isaac-GR00T")  # 确保路径中包含 gr00t 文件夹
 
 import os
 import subprocess
@@ -182,7 +184,7 @@ def main(config: Config):
         max_steps=config.max_steps,
         save_strategy="steps",
         save_steps=config.save_steps,
-        evaluation_strategy="no",
+        # evaluation_strategy="no",
         save_total_limit=8,
         report_to=config.report_to,
         seed=42,
