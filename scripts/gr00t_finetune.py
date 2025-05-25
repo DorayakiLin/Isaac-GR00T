@@ -15,6 +15,9 @@
 import sys
 sys.path.append("/root/private_data/Isaac-GR00T")  # 确保路径中包含 gr00t 文件夹
 
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="torchvision.io")
+
 import os
 import subprocess
 import sys
@@ -51,13 +54,13 @@ class Config:
     batch_size: int = 16
     """Batch size per GPU for training."""
 
-    max_steps: int = 10000
+    max_steps: int = 50000
     """Maximum number of training steps."""
 
     num_gpus: int = 1
     """Number of GPUs to use for training."""
 
-    save_steps: int = 500
+    save_steps: int = 5000
     """Number of steps between saving checkpoints."""
 
     # Model parameters
